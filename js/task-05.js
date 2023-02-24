@@ -5,10 +5,11 @@ const textInputRef = document.querySelector("#name-input");
 const outputRef = document.querySelector("#name-output");
 
 textInputRef.addEventListener("input", (event) => {
-  outputRef.textContent = event.currentTarget.value
+  outputRef.textContent = event.currentTarget.value.trim()
     ? event.currentTarget.value
     : "Anonymous";
+  // trim() - видаляє пробільні символи з початку та кінця рядка;
 
   // ========== Version 2 ==========
-  // outputRef.textContent = event.currentTarget.value || "Anonymous";
+  // outputRef.textContent = event.currentTarget.value.trim() || "Anonymous";
 });
